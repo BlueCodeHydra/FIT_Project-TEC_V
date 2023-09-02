@@ -1,5 +1,5 @@
 const initBg = (autoplay = true) => {
-    const bgImgsNames = ['CubeSat_splash.jpg', 'falcon9_launch1.jpg', 'moon1.png', 'falcon9_launch2.png'];
+    const bgImgsNames = ['UnderWater4.jpg', 'Underwater5.jpg', 'UnderWater1.jpg', 'UnderWater3.jpg'];
     const bgImgs = bgImgsNames.map(img => "img/" + img);
 
 
@@ -9,6 +9,8 @@ const initBg = (autoplay = true) => {
       $.backstretch('pause');  
     }    
 }
+
+
 
 const setBg = id => {
     $.backstretch('show', id);

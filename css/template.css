@@ -5,6 +5,7 @@ Template - All
 */
 
 /* Font color, text, spacing =================================================== */
+
 body {
     font-family: 'Open Sans', Arial, sans-serif;
     font-size: 17px;
@@ -14,8 +15,17 @@ body {
     background-color: #2C353C;
 }
 
+/* TEC-V Corner Image */
+.left-img {
+    position: absolute; /* Position the image relative to the header container. */
+    margin-top: 5%;
+    max-width: 25%;
+    max-height: 25%;
+  }
+
+/* Background Image Transition speed */
 a { 
-    transition: all 0.3s ease; 
+    transition: all 1.5s ease-out ;
     text-decoration: none;
 }
 
@@ -23,8 +33,6 @@ ul { padding: 0; }
 a:hover { text-decoration: none; }
 button:focus { outline: none; }
 p { line-height: 1.9; }
-.tm-logo { margin-right: 20px; }
-.tm-slogan { font-size: 0.8rem; }
 
 /* Navigation ============================================================ */
 .navbar-toggler {
@@ -46,7 +54,7 @@ p { line-height: 1.9; }
 .navbar-expand-lg .navbar-nav .nav-link { padding: 0; }
 
 /* Nav text */
-.navbar-expand-lg .navbar-nav .tm-nav-link {
+.navbar-expand-lg .navbar-nav .nav-link {
     font-size: 20px;   
     font-weight: 400;
     color: white;    
@@ -57,13 +65,13 @@ p { line-height: 1.9; }
 
 .nav-item:last-child { margin-right: 0; }
 
-.nav-item.active .tm-nav-link,
-.nav-item:hover .tm-nav-link {
+.nav-item.active .nav-link,
+.nav-item:hover .nav-link {
     color: #9CC;
 }
 
 /* Page Background Slash ======================================================= */
-.tm-bg {
+.bg {
     position: absolute;
     left: 0;
     right: 0;
@@ -73,28 +81,28 @@ p { line-height: 1.9; }
     z-index: -1000;
 }
 
-.tm-bg-left,
-.tm-bg-right {
+.bg-left,
+.bg-right {
     position: relative;
     width: 50%;
     height: 100%;
 }
 
 /* Square Background */
-.tm-bg-right { background-color: rgba(0,0,0,0.7); }
+.bg-right { background-color: rgba(0,0,0,0.7); }
 
 /* Triangle Background */
-.tm-bg-left {
+.bg-left {
     border-right: 230px solid rgba(0,0,0,0.7);
     border-top: 100vh solid transparent;
 }
 
-.tm-bg-controls-wrapper {
+.bg-controls-wrapper {
     display: inline-block;
     margin-left: -150px;
 }
 
-.tm-bg-control {
+.bg-control {
     display: inline-block;
     width: 14px;
     height: 14px;
@@ -103,14 +111,14 @@ p { line-height: 1.9; }
     cursor: pointer;
 }
 
-.tm-bg-control.active,
-.tm-bg-control:hover {
+.bg-control.active,
+.bg-control:hover {
     background-color: white;
 }
 
 
 /* Shows the gray background slash ======================================= */
-.tm-container {
+.content-container {
     width: 100%;
     height: 100%;
     min-height: 100vh;
@@ -121,9 +129,9 @@ p { line-height: 1.9; }
 }
 
 /* Puts content within gray box (left margin) */
-.tm-row { display: flex; }
+.content-row { display: flex; }
 
-.tm-col-left {
+.left-col {
     width: 50%;
     height: 100%;
     padding-left: 40px;  
@@ -131,7 +139,7 @@ p { line-height: 1.9; }
 }
 
 /* Puts content within gray box (right margin) */
-.tm-col-right {
+.right-col {
     width: 50%;
     height: 100%;
     padding-left: 70px;
@@ -139,9 +147,9 @@ p { line-height: 1.9; }
 }
 
 /* Sets content top margin */
-.tm-content {
+.content {
     max-width: 660px;
-    margin-top: 50px;
+    margin-top: -20%;
     padding-right: 20px;
 }
 
@@ -157,7 +165,7 @@ p { line-height: 1.9; }
 }
 
 /* White Content Separation Slash */
-.tm-content-title { font-size: 1.5rem; }
+.content-title { font-size: 1.5rem; }
 hr { border-top: 1px solid white; }
 
 
@@ -184,70 +192,70 @@ hr { border-top: 1px solid white; }
     color: black;
 }
 
-.tm-site-footer {
+.site-footer {
     padding: 40px 0 20px;
     max-width: 660px;
     font-size: 0.95rem;
 }
 
-.tm-col-footer { padding-left: 0; }
-.tm-text-link { color: white; }
+.col-footer { padding-left: 0; }
+.text-link { color: white; }
 
-.tm-text-link:hover,
-.tm-text-link:focus {
+.text-link:hover,
+.text-link:focus {
     color: #9CC;
 }
 
 /* Image and text spacing */
-.tm-spacing-text { max-width: 365px; }
-.tm-spacing-img { margin-right: 25px; }
-.tm-spacing-img-r { margin-left: 25px; }
+.spacing-text { max-width: 365px; }
+.spacing-img { margin-right: 25px; }
+.spacing-img-r { margin-left: 25px; }
 
 /* Column Alignment  */
 @media (max-width: 768px) {
-    .tm-row { flex-direction: column; }
+    .content-row { flex-direction: column; }
 
-    .tm-col-left,
-    .tm-col-right,
-    .tm-bg-left,
-    .tm-bg-right {
+    .left-col,
+    .right-col,
+    .bg-left,
+    .bg-right {
         width: 100%;
     }
 
-    #tm-main-nav {
+    #main-nav {
         position: fixed;
         top: 50px;
         right: 40px;
         padding-bottom: 0;
     }  
     
-    .tm-bg { flex-direction: column; }
+    .bg { flex-direction: column; }
 
-    .tm-bg-left {
+    .bg-left {
         height: 200px;        
         border-bottom: 50px solid rgba(0,0,0,0.5);
         border-right: 0;
         border-top: 0;
     }
 
-    .tm-bg-right { height: calc(100% - 200px); }
+    .bg-right { height: calc(100% - 200px); }
 
-    .tm-bg-controls-wrapper {
+    .bg-controls-wrapper {
         margin-left: 0;
         margin-top: 50px;
     }
 
-    .tm-content {
+    .content {
         max-height: none;
         margin-top: 40px;
     }
 
-    .tm-col-right {
+    .right-col {
         padding-top: 40px;
         padding-left: 30px;
     }
 
-    .tm-col-footer {
+    .col-footer {
         padding-left: 10px;
         padding-right: 10px;
     }
@@ -255,16 +263,14 @@ hr { border-top: 1px solid white; }
 
 /* Site name and logo */
 @media (max-width: 460px) {
-    .tm-logo { margin-right: 15px; }
-    .tm-sitename { font-size: 1.8rem; }
-    .tm-slogon { font-size: 0.8rem; }
+    .sitename { font-size: 1.5rem; }
 }
 
 /* Spacing for media Images */
 @media (max-width: 450px), (min-width: 768px) and (max-width: 830px), (min-width: 992px) and (max-width: 1040px) {
-    .tm-spacing-media { flex-direction: column; }
-    .tm-spacing-media-img-l { flex-direction: column-reverse; }
-    .tm-spacing-text { margin-top: 20px; }
-    .tm-spacing-img { margin-right: 0; }
-    .tm-spacing-img-r { margin-left: 0; }
+    .spacing-media { flex-direction: column; }
+    .spacing-media-img-l { flex-direction: column-reverse; }
+    .spacing-text { margin-top: 20px; }
+    .spacing-img { margin-right: 0; }
+    .spacing-img-r { margin-left: 0; }
 }

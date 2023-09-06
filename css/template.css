@@ -25,7 +25,7 @@ body {
 
 /* Background Image Transition speed */
 a { 
-    transition: all 1.5s ease-out ;
+    transition: all 1.5s;
     text-decoration: none;
 }
 

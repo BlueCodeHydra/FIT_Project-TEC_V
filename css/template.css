@@ -89,11 +89,11 @@ p { line-height: 1.9; }
 }
 
 /* Square Background */
-.bg-right { background-color: rgba(0,0,0,0.7); }
+.bg-right { background-color: rgba(0,0,0,0.8); }
 
 /* Triangle Background */
 .bg-left {
-    border-right: 230px solid rgba(0,0,0,0.7);
+    border-right: 230px solid rgba(0,0,0,0.8);
     border-top: 100vh solid transparent;
 }
 
